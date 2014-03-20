@@ -1,38 +1,11 @@
-function BoxController($scope) {
-	$scope.items = [{name:'Item One', visible:true}, {name:'Item Two', visible: true}];
+function StaffCtrl($scope) {
+	$scope.items = [{name:'Bob', alive:true}, {name:'Joe', alive: true}];
 
-	$scope.addItem = function() {
+	$scope.addPerson = function() {
 		$scope.items.push({name: $scope.itemText, visible: true});
 		$scope.itemText = '';
 	}
 
+
 }
 
-
-
-function TodoCtrl($scope) {
-  $scope.todos = [
-    {text:'learn angular', done:true},
-    {text:'build an angular app', done:false}];
- 
-  $scope.addTodo = function() {
-    $scope.todos.push({text:$scope.todoText, done:false});
-    $scope.todoText = '';
-  };
- 
-  $scope.remaining = function() {
-    var count = 0;
-    angular.forEach($scope.todos, function(todo) {
-      count += todo.done ? 0 : 1;
-    });
-    return count;
-  };
- 
-  $scope.archive = function() {
-    var oldTodos = $scope.todos;
-    $scope.todos = [];
-    angular.forEach(oldTodos, function(todo) {
-      if (!todo.done) $scope.todos.push(todo);
-    });
-  };
-}

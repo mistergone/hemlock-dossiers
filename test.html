@@ -4,10 +4,11 @@
 	<script type="text/javascript" src="js/test.js"></script>
 </head>
 <body ng-app>
-	<div ng-controller="BoxController">
+	<div ng-controller="StaffCtrl">
+		<p>{{terd}}</p>
 		<p>
-			<form ng-submit="addItem()">
-				<input type="text" ng-model="itemText"  size="30" placeholder="add new todo here">
+			<form ng-submit="addPerson()">
+				<input type="text" ng-model="itemText"  size="30" placeholder="add new staff member here">
 	        	<input class="btn-primary" type="submit" value="add">
 	        </form>
 	    </p>
