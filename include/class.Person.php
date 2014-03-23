@@ -8,7 +8,6 @@ class Person {
 	var $job;
 	var $parent;
 	var $descendents;
-
 }
 
 
